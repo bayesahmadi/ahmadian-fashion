@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="فروشگاه آنلاین احمدیان فیشن" />
+    <title>احمدیان فیشن | استایل، امضای شما</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="image/favicon.png" type="image/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#home" aria-label="Ahmadian Fashion">
+        <span class="brand-mark">AF</span>
+        <span>احمدیان <strong>فیشن</strong></span>
+      </a>
+      <nav class="nav" aria-label="ناوبری اصلی">
+        <a href="#home">خانه</a>
+        <a href="#products">فروشگاه</a>
+        <a href="#about">درباره ما</a>
+      </nav>
+      <button
+        class="cart-button"
+        id="cartButton"
+        aria-label="باز کردن سبد خرید"
+      >
+        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+        <span class="cart-count" id="cartCount">۰</span>
+      </button>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="season-line">
+            <span></span> کالکشن بهار و تابستان 1405
+          </div>
+          <h1>لباس‌هایی برای<br /><em>درخششِ بی‌دردسر.</em></h1>
+          <p class="hero-text">
+            فرم‌های ساده، پارچه‌های خوش‌کیفیت و جزئیاتی که استایل شما را
+            به‌یادماندنی می‌کنند.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="primary-button"
+              >دیدن کالکشن <span>←</span></a
+            >
+            <a href="#about" class="text-button"
+              >داستان احمدیان <span>↙</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="تصاویری از کالکشن جدید">
+          <div class="sun-orb"></div>
+          <div class="photo photo-main">
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=90"
+              alt="مدل لباس زنانه از کالکشن احمدیان فیشن"
+            />
+          </div>
+          <div class="photo photo-small">
+            <img
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=90"
+              alt="جزئیاتی از لباس‌های کالکشن"
+            />
+          </div>
+          <div class="style-note">
+            <span>01</span>
+            <p>برای حرکت<br /><strong>طراحی شده</strong></p>
+          </div>
+          <div class="hero-card">
+            <span>NEW<br />SEASON</span>
+            <p>با عشق، برای<br />روزهای روشن</p>
+          </div>
+        </div>
+        <p class="side-caption">AHMADIAN FASHION — EST. 1405</p>
+      </section>
+
+      <section class="benefits" aria-label="مزایای خرید">
+        <div>
+          <span class="benefit-icon"
+            ><i class="fa-solid fa-truck-fast"></i
+          ></span>
+          <p><strong>ارسال رایگان</strong> برای خرید بالای 1000 افغانی</p>
+        </div>
+        <div>
+          <span class="benefit-icon"
+            ><i class="fa-solid fa-rotate-left"></i
+          ></span>
+          <p><strong>7 روز ضمانت بازگشت</strong> کالا</p>
+        </div>
+        <div>
+          <span class="benefit-icon"
+            ><i class="fa-solid fa-shield-halved"></i
+          ></span>
+          <p><strong>پرداخت امن</strong> و آسان آنلاین</p>
+        </div>
+      </section>
+
+      <section class="products-section" id="products">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">انتخاب‌های این هفته</p>
+            <h2>محبوب ترین اجناس روز</h2>
+          </div>
+          <div class="filters" id="filters">
+            <button class="filter active" data-category="all">همه</button>
+            <button class="filter" data-category="women">زنانه</button>
+            <button class="filter" data-category="men">مردانه</button>
+            <button class="filter" data-category="kids">طفلانه</button>
+            <button class="filter" data-category="accessory">اکسسوری</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-number">1405</div>
+        <div>
+          <p class="eyebrow">داستان ما</p>
+          <h2>سادگی، با یک تفاوت<br />به‌یادماندنی.</h2>
+        </div>
+        <p>
+          در احمدیان فیشن، ما به لباس به‌عنوان راهی برای بیان خودتان نگاه
+          می‌کنیم. هر قطعه با دقت انتخاب شده تا در کنار شما، بخشی از خاطره‌های
+          خوبتان باشد.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#home"
+        ><span class="brand-mark">AF</span
+        ><span>احمدیان <strong>فیشن</strong></span></a
+      >
+      <p>© 1405 احمدیان فیشن — با عشق برای استایل شما</p>
+      <a href="mailto:hello@ahmadianfashion.store"
+        >hello@ahmadianfashion.store</a
+      >
+    </footer>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="سبد خرید">
+      <div class="cart-header">
+        <h2>سبد خرید </h2>
+        <button id="closeCart" aria-label="بستن">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div><span>جمع کل</span><strong id="cartTotal">۰ افغانی</strong></div>
+        <button class="checkout">ادامه پروسه خرید</button>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
