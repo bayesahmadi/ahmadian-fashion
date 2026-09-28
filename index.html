@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="فروشگاه آنلاین احمدیان فیشن" />
+    <meta name="description" content="فروشگاه آنلاین احمدیان فیشن — استایل، امضای شما" />
     <title>احمدیان فیشن | استایل، امضای شما</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,9 +18,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="image/favicon.png" type="image/favicon.png" />
+    <link rel="icon" href="image/favicon.png" type="image/png" />
   </head>
   <body>
+    <!-- ===== HEADER ===== -->
     <header class="header">
       <a class="brand" href="#home" aria-label="Ahmadian Fashion">
         <span class="brand-mark">AF</span>
@@ -31,20 +32,18 @@
         <a href="#products">فروشگاه</a>
         <a href="#about">درباره ما</a>
       </nav>
-      <button
-        class="cart-button"
-        id="cartButton"
-        aria-label="باز کردن سبد خرید"
-      >
+      <button class="cart-button" id="cartButton" aria-label="باز کردن سبد خرید">
         <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
         <span class="cart-count" id="cartCount">۰</span>
       </button>
     </header>
+
     <main>
+      <!-- ===== HERO ===== -->
       <section class="hero" id="home">
         <div class="hero-content">
           <div class="season-line">
-            <span></span> کالکشن بهار و تابستان 1405
+            <span></span> کالکشن بهار و تابستان ۱۴۰۵
           </div>
           <h1>لباس‌هایی برای<br /><em>درخششِ بی‌دردسر.</em></h1>
           <p class="hero-text">
@@ -86,18 +85,19 @@
         <p class="side-caption">AHMADIAN FASHION — EST. 1405</p>
       </section>
 
+      <!-- ===== BENEFITS ===== -->
       <section class="benefits" aria-label="مزایای خرید">
         <div>
           <span class="benefit-icon"
             ><i class="fa-solid fa-truck-fast"></i
           ></span>
-          <p><strong>ارسال رایگان</strong> برای خرید بالای 1000 افغانی</p>
+          <p><strong>ارسال رایگان</strong> برای خرید بالای ۱۰۰۰ افغانی</p>
         </div>
         <div>
           <span class="benefit-icon"
             ><i class="fa-solid fa-rotate-left"></i
           ></span>
-          <p><strong>7 روز ضمانت بازگشت</strong> کالا</p>
+          <p><strong>۷ روز ضمانت بازگشت</strong> کالا</p>
         </div>
         <div>
           <span class="benefit-icon"
@@ -107,11 +107,12 @@
         </div>
       </section>
 
+      <!-- ===== PRODUCTS ===== -->
       <section class="products-section" id="products">
         <div class="section-heading">
           <div>
             <p class="eyebrow">انتخاب‌های این هفته</p>
-            <h2>محبوب ترین اجناس روز</h2>
+            <h2>محبوب‌ترین اجناس روز</h2>
           </div>
           <div class="filters" id="filters">
             <button class="filter active" data-category="all">همه</button>
@@ -124,8 +125,9 @@
         <div class="product-grid" id="productGrid"></div>
       </section>
 
+      <!-- ===== ABOUT ===== -->
       <section class="about" id="about">
-        <div class="about-number">1405</div>
+        <div class="about-number">۱۴۰۵</div>
         <div>
           <p class="eyebrow">داستان ما</p>
           <h2>سادگی، با یک تفاوت<br />به‌یادماندنی.</h2>
@@ -138,25 +140,104 @@
       </section>
     </main>
 
-    <footer>
-      <a class="brand" href="#home"
-        ><span class="brand-mark">AF</span
-        ><span>احمدیان <strong>فیشن</strong></span></a
-      >
-      <p>© 1405 احمدیان فیشن — با عشق برای استایل شما</p>
-      <a href="mailto:hello@ahmadianfashion.store"
-        >hello@ahmadianfashion.store</a
-      >
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a class="brand" href="#home">
+            <span class="brand-mark">AF</span>
+            <span>احمدیان <strong>فیشن</strong></span>
+          </a>
+          <p>
+            ما با عشق و دقت، لباس‌هایی را انتخاب می‌کنیم که استایل شما را
+            به‌یادماندنی کنند. از پارچه تا فرم، همه چیز برای شما.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="اینستاگرام"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="فیسبوک"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="واتساپ"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="#" aria-label="تلگرام"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h4>دسترسی سریع</h4>
+          <div class="footer-links">
+            <a href="#home">خانه</a>
+            <a href="#products">فروشگاه</a>
+            <a href="#about">درباره ما</a>
+            <a href="#">تماس با ما</a>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <h4>دسته‌بندی‌ها</h4>
+          <div class="footer-links">
+            <a href="#products">لباس زنانه</a>
+            <a href="#products">لباس مردانه</a>
+            <a href="#products">لباس طفلانه</a>
+            <a href="#products">اکسسوری</a>
+          </div>
+        </div>
+
+        <!-- Contact & newsletter -->
+        <div>
+          <h4>با ما در تماس باشید</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>کابل، افغانستان — خیابان اصلی</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>hello@ahmadianfashion.store</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+93 ۷۰۰ ۰۰۰ ۰۰۰</span>
+            </li>
+          </ul>
+          <form class="footer-newsletter" onsubmit="event.preventDefault()">
+            <input type="email" placeholder="ایمیل شما" aria-label="ایمیل" />
+            <button type="submit" aria-label="عضویت">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© ۱۴۰۵ احمدیان فیشن — با عشق برای استایل شما</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </div>
+      </div>
     </footer>
 
+    <!-- ===== CART PANEL ===== -->
     <aside class="cart-panel" id="cartPanel" aria-label="سبد خرید">
       <div class="cart-header">
-        <h2>سبد خرید </h2>
+        <h2>سبد خرید</h2>
         <button id="closeCart" aria-label="بستن">×</button>
       </div>
       <div class="cart-items" id="cartItems"></div>
       <div class="cart-footer">
-        <div><span>جمع کل</span><strong id="cartTotal">۰ افغانی</strong></div>
+        <div>
+          <span>جمع کل</span><strong id="cartTotal">۰ افغانی</strong>
+        </div>
         <button class="checkout">ادامه پروسه خرید</button>
       </div>
     </aside>
