@@ -147,7 +147,7 @@ const products = [
     category: "men",
     categoryName: "مردانه",
     price: 380,
-    image: "/image/t-shirt.webp",
+    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=80",
   },
   {
     id: 18,
