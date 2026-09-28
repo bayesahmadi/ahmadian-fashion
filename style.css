@@ -1,3 +1,8 @@
+/* ============================================================
+   AHMADIAN FASHION — Stylesheet
+   Fully responsive · Mobile-first · Modern & elegant
+   ============================================================ */
+
 /* ===== ROOT VARIABLES ===== */
 :root {
   --ink: #1e1e1c;
@@ -65,7 +70,9 @@ ul {
   border-radius: 3px;
 }
 
-/* ===== HEADER ===== */
+/* ============================================================
+   HEADER
+   ============================================================ */
 .header {
   height: 78px;
   display: flex;
@@ -211,7 +218,9 @@ ul {
   line-height: 1;
 }
 
-/* ===== MOBILE MENU DRAWER ===== */
+/* ============================================================
+   MOBILE MENU DRAWER
+   ============================================================ */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -324,7 +333,9 @@ ul {
   transform: translateY(-3px);
 }
 
-/* ===== HERO ===== */
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   background: linear-gradient(145deg, #e8d9c4 0%, #dfd0b8 40%, #e6d8c5 100%);
   display: grid;
@@ -564,7 +575,9 @@ h1 em {
   z-index: 3;
 }
 
-/* ===== BENEFITS ===== */
+/* ============================================================
+   BENEFITS
+   ============================================================ */
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -604,7 +617,9 @@ h1 em {
   font-weight: 700;
 }
 
-/* ===== PRODUCTS ===== */
+/* ============================================================
+   PRODUCTS
+   ============================================================ */
 .products-section {
   padding: 90px clamp(20px, 9vw, 140px);
 }
@@ -732,7 +747,9 @@ h2 {
   font-size: 14px !important;
 }
 
-/* ===== ABOUT ===== */
+/* ============================================================
+   ABOUT
+   ============================================================ */
 .about {
   display: grid;
   grid-template-columns: 0.7fr 1.2fr 1fr;
@@ -762,7 +779,9 @@ h2 {
   margin: 0;
 }
 
-/* ===== FOOTER ===== */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
   background: #161614;
   color: #b0ada6;
@@ -936,7 +955,9 @@ h2 {
   color: var(--accent-soft);
 }
 
-/* ===== OVERLAY ===== */
+/* ============================================================
+   OVERLAY
+   ============================================================ */
 .overlay {
   position: fixed;
   inset: 0;
@@ -952,7 +973,9 @@ h2 {
   pointer-events: all;
 }
 
-/* ===== CART PANEL ===== */
+/* ============================================================
+   CART PANEL
+   ============================================================ */
 .cart-panel {
   position: fixed;
   top: 0;
@@ -1064,7 +1087,9 @@ h2 {
   justify-content: center;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1079,6 +1104,8 @@ h2 {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
+/* --- Tablet --- */
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1093,8 +1120,8 @@ h2 {
   }
 }
 
+/* --- Hide desktop nav, show hamburger --- */
 @media (max-width: 900px) {
-  /* Show hamburger, hide desktop nav */
   .nav {
     display: none;
   }
@@ -1103,6 +1130,7 @@ h2 {
   }
 }
 
+/* --- Mobile --- */
 @media (max-width: 760px) {
   .hero {
     display: block;
@@ -1148,15 +1176,34 @@ h2 {
   .side-caption {
     display: none;
   }
+
+  /* --- Benefits: keep 3 columns like desktop --- */
   .benefits {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 20px clamp(12px, 4vw, 24px);
   }
   .benefits div {
-    border: 0;
-    justify-content: flex-start;
-    padding: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 0 6px;
+    border-left: 1px solid var(--line);
   }
+  .benefits div:last-child {
+    border-left: 0;
+  }
+  .benefits .benefit-icon {
+    font-size: 22px;
+  }
+  .benefits p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .benefits strong {
+    font-size: 11px;
+  }
+
   .section-heading {
     flex-direction: column;
     align-items: flex-start;
@@ -1200,6 +1247,7 @@ h2 {
   }
 }
 
+/* --- Small mobile --- */
 @media (max-width: 420px) {
   .product-grid {
     grid-template-columns: 1fr 1fr;
