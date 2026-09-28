@@ -23,20 +23,76 @@
   <body>
     <!-- ===== HEADER ===== -->
     <header class="header">
-      <a class="brand" href="#home" aria-label="Ahmadian Fashion">
-        <span class="brand-mark">AF</span>
-        <span>احمدیان <strong>فیشن</strong></span>
-      </a>
+      <div class="header-left">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="باز کردن منو"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a class="brand" href="#home" aria-label="Ahmadian Fashion">
+          <span class="brand-mark">AF</span>
+          <span>احمدیان <strong>فیشن</strong></span>
+        </a>
+      </div>
+
+      <!-- Desktop navigation -->
       <nav class="nav" aria-label="ناوبری اصلی">
         <a href="#home">خانه</a>
         <a href="#products">فروشگاه</a>
         <a href="#about">درباره ما</a>
       </nav>
+
       <button class="cart-button" id="cartButton" aria-label="باز کردن سبد خرید">
         <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
         <span class="cart-count" id="cartCount">۰</span>
       </button>
     </header>
+
+    <!-- ===== MOBILE MENU DRAWER ===== -->
+    <aside class="mobile-menu" id="mobileMenu" aria-label="منوی موبایل">
+      <div class="mobile-menu-header">
+        <a class="brand" href="#home">
+          <span class="brand-mark">AF</span>
+          <span>احمدیان <strong>فیشن</strong></span>
+        </a>
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="بستن منو">
+          ×
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="#home" data-close-menu>
+          خانه <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a href="#products" data-close-menu>
+          فروشگاه <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a href="#about" data-close-menu>
+          درباره ما <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <p>ما را در شبکه‌های اجتماعی دنبال کنید</p>
+        <div class="mobile-menu-socials">
+          <a href="#" aria-label="اینستاگرام"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="فیسبوک"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="واتساپ"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="#" aria-label="تلگرام"
+            ><i class="fa-brands fa-telegram"></i
+          ></a>
+        </div>
+      </div>
+    </aside>
 
     <main>
       <!-- ===== HERO ===== -->
@@ -143,7 +199,6 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
       <div class="footer-grid">
-        <!-- Brand column -->
         <div class="footer-brand">
           <a class="brand" href="#home">
             <span class="brand-mark">AF</span>
@@ -169,7 +224,6 @@
           </div>
         </div>
 
-        <!-- Quick links -->
         <div>
           <h4>دسترسی سریع</h4>
           <div class="footer-links">
@@ -180,7 +234,6 @@
           </div>
         </div>
 
-        <!-- Categories -->
         <div>
           <h4>دسته‌بندی‌ها</h4>
           <div class="footer-links">
@@ -191,7 +244,6 @@
           </div>
         </div>
 
-        <!-- Contact & newsletter -->
         <div>
           <h4>با ما در تماس باشید</h4>
           <ul class="footer-contact">
@@ -241,6 +293,7 @@
         <button class="checkout">ادامه پروسه خرید</button>
       </div>
     </aside>
+
     <div class="overlay" id="overlay"></div>
 
     <script src="script.js"></script>

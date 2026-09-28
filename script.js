@@ -1,6 +1,7 @@
 /* ============================================================
    AHMADIAN FASHION — Main Script
    40 unique products across 4 categories
+   Mobile menu + cart logic
    ============================================================ */
 
 const products = [
@@ -357,6 +358,9 @@ const price = (amount) => `${faNumber.format(amount)} افغانی`;
 
 const productGrid = document.querySelector("#productGrid");
 const cartPanel = document.querySelector("#cartPanel");
+const overlay = document.querySelector("#overlay");
+const mobileMenu = document.querySelector("#mobileMenu");
+const menuToggle = document.querySelector("#menuToggle");
 
 /* ============================================================
    RENDER PRODUCTS
@@ -428,14 +432,27 @@ function addToCart(id) {
   renderCart();
 }
 
+/* ============================================================
+   PANEL CONTROLS
+   ============================================================ */
 function toggleCart(show) {
   cartPanel.classList.toggle("open", show);
-  document.body.style.overflow = show ? "hidden" : "";
+  overlay.classList.toggle("active", show);
+  document.body.classList.toggle("no-scroll", show);
+}
+
+function toggleMobileMenu(show) {
+  mobileMenu.classList.toggle("open", show);
+  overlay.classList.toggle("active", show);
+  document.body.classList.toggle("no-scroll", show);
+  menuToggle.setAttribute("aria-expanded", show ? "true" : "false");
 }
 
 /* ============================================================
    EVENT LISTENERS
    ============================================================ */
+
+/* Filters */
 document.querySelector("#filters").addEventListener("click", (event) => {
   if (!event.target.matches(".filter")) return;
   document
@@ -445,10 +462,12 @@ document.querySelector("#filters").addEventListener("click", (event) => {
   renderProducts(event.target.dataset.category);
 });
 
+/* Quick add */
 productGrid.addEventListener("click", (event) => {
   if (event.target.matches(".quick-add")) addToCart(event.target.dataset.id);
 });
 
+/* Remove from cart */
 document.querySelector("#cartItems").addEventListener("click", (event) => {
   if (!event.target.matches(".remove")) return;
   const index = cart.findIndex(
@@ -461,6 +480,7 @@ document.querySelector("#cartItems").addEventListener("click", (event) => {
   }
 });
 
+/* Cart open/close */
 document
   .querySelector("#cartButton")
   .addEventListener("click", () => toggleCart(true));
@@ -469,10 +489,33 @@ document
   .querySelector("#closeCart")
   .addEventListener("click", () => toggleCart(false));
 
-document
-  .querySelector("#overlay")
-  .addEventListener("click", () => toggleCart(false));
+/* Mobile menu open/close */
+menuToggle.addEventListener("click", () => toggleMobileMenu(true));
 
+document
+  .querySelector("#mobileMenuClose")
+  .addEventListener("click", () => toggleMobileMenu(false));
+
+/* Auto-close mobile menu on link click */
+document.querySelectorAll("[data-close-menu]").forEach((link) => {
+  link.addEventListener("click", () => toggleMobileMenu(false));
+});
+
+/* Overlay click — close whichever panel is open */
+overlay.addEventListener("click", () => {
+  toggleCart(false);
+  toggleMobileMenu(false);
+});
+
+/* ESC key to close panels */
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    toggleCart(false);
+    toggleMobileMenu(false);
+  }
+});
+
+/* Checkout */
 document.querySelector(".checkout").addEventListener("click", () =>
   alert("این بخش برای تمرین است؛ پرداخت واقعی فعال نیست."),
 );
