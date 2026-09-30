@@ -347,6 +347,15 @@ const products = [
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80",
     badge: "ویژه",
   },
+  {
+    id: 41,
+    name: "گردنبند مینیمال",
+    category: "accessory",
+    categoryName: "اکسسوری",
+    price: 520,
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80",
+    badge: "ویژه",
+  }
 ];
 
 /* ============================================================
